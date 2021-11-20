@@ -90,6 +90,8 @@ let g:lightline = {
 " remap keys
 nnoremap <A-Left> :bprev<CR>
 nnoremap <A-Right> :bnext<CR>
+nnoremap <A-h> :bprev<CR>
+nnoremap <A-l> :bnext<CR>
 nmap <leader>bq :bp <BAR> bd #<CR>
 
 " lightline-buffer ui settings
