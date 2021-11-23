@@ -17,6 +17,7 @@ Plug 'ctrlpvim/ctrlp.vim'     " Fuzzy Finder for everything
 Plug 'norcalli/nvim-colorizer.lua' "Fastest colorized in the west
 Plug 'dense-analysis/ale' "Linter
 Plug 'andweeb/presence.nvim'
+Plug 'habamax/vim-godot'
 
 call plug#end()
 " END :: ----- VIM-PLUG PLUGINS -----
@@ -32,14 +33,16 @@ hi Normal guibg=NONE ctermbg=NONE
 
 
 " START :: ----- ALE CONFIG -----
-let b:ale_linter_aliases = ['javascript', 'jsx']
+let b:ale_linter_aliases = ['javascript', 'jsx', 'python']
 let g:ale_linters = {
 \   'javascript': ['eslint', 'flow-language-server'],
 \   'jsx': ['eslint'],
+\   'python': ['autopep8', 'yapf'],
 \}
 let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \   'jsx': ['eslint'],
+\   'python': ['flake8', 'pylint'],
 \}
 " END :: ----- ALE CONFIG -----
 
