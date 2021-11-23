@@ -16,6 +16,7 @@ Plug 'jiangmiao/auto-pairs'   " Auto-close regular identation tokens
 Plug 'ctrlpvim/ctrlp.vim'     " Fuzzy Finder for everything
 Plug 'norcalli/nvim-colorizer.lua' "Fastest colorized in the west
 Plug 'dense-analysis/ale' "Linter
+Plug 'andweeb/presence.nvim'
 
 call plug#end()
 " END :: ----- VIM-PLUG PLUGINS -----
