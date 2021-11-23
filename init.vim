@@ -32,6 +32,11 @@ hi Normal guibg=NONE ctermbg=NONE
 " END :: ----- VIM MISC CONFIG -----
 
 
+" START :: ----- DEOPLETE CONFIG -----
+let g:python3_host_prog = expand('C:\\Python38\\python.exe')
+" END :: ----- DEOPLETE CONFIG -----
+
+
 " START :: ----- ALE CONFIG -----
 let b:ale_linter_aliases = ['javascript', 'jsx', 'python']
 let g:ale_linters = {
