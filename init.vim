@@ -17,7 +17,7 @@ Plug 'ctrlpvim/ctrlp.vim'     " Fuzzy Finder for everything
 Plug 'norcalli/nvim-colorizer.lua' "Fastest colorized in the west
 Plug 'dense-analysis/ale' "Linter
 Plug 'andweeb/presence.nvim'
-Plug 'habamax/vim-godot'
+Plug 'calviken/vim-gdscript3'
 
 call plug#end()
 " END :: ----- VIM-PLUG PLUGINS -----
@@ -33,21 +33,6 @@ hi Normal guibg=NONE ctermbg=NONE
 
 
 " START :: ----- ALE CONFIG -----
-let g:ale_completion_enabled = 1
-let g:ale_completion_autoimport = 1
-
-call ale#linter#Define('gdscript', {
-
-            \   'name': 'godot',
-
-            \   'lsp': 'socket',
-
-            \   'address': '127.0.0.1:6008',
-
-            \   'project_root': 'project.godot',
-
-            \})
-
 let b:ale_linter_aliases = ['javascript', 'jsx', 'python']
 let g:ale_linters = {
 \   'javascript': ['eslint', 'flow-language-server'],
