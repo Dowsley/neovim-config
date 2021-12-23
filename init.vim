@@ -4,7 +4,6 @@ call plug#begin()
 Plug 'ayu-theme/ayu-vim'
 Plug 'sheerun/vim-polyglot' " Multiple language-support packs
 Plug 'mattn/emmet-vim'      " HTML Writing tool
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Auto-completion tool, VS-Code like
 Plug 'preservim/nerdtree' " File tree manager
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " File finder
 Plug 'junegunn/fzf.vim' " File finder, same as above
@@ -14,7 +13,6 @@ Plug 'ryanoasis/vim-devicons' " Icons, yay!
 Plug 'airblade/vim-gitgutter' " Git gutter literally
 Plug 'jiangmiao/auto-pairs'   " Auto-close regular identation tokens 
 Plug 'ctrlpvim/ctrlp.vim'     " Fuzzy Finder for everything
-Plug 'norcalli/nvim-colorizer.lua' "Fastest colorized in the west
 Plug 'dense-analysis/ale' "Linter
 Plug 'andweeb/presence.nvim'
 Plug 'calviken/vim-gdscript3'
@@ -45,12 +43,6 @@ let g:ale_fixers = {
 \   'python': ['flake8', 'pylint'],
 \}
 " END :: ----- ALE CONFIG -----
-
-
-" START ----- COLORIZER CONFIGURATION -----
-" Attaches to every FileType mode
-lua require'colorizer'.setup()
-" END ----- COLORIZER CONFIGURATION -----
 
 
 " START  ----- CTRL P CONFIGURATION -----
@@ -139,18 +131,6 @@ let g:lightline_buffer_minfextlen = 0
 " reserve length for other component (e.g. info, close)
 let g:lightline_buffer_reservelen = 20
 " END  ----- LIGHTLINE CONFIGURATION -----
-
-
-" START  ----- DEOPLETE CONFIGURATION -----
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option({
-\ 'enable_smart_case': 1,
-\ 'enable_refresh_always': 0,
-\ 'auto_complete_delay': 200,
-\ 'sources._': ['buffer', 'tags'],
-\ 'cache_limit_size': 5000000
-\ })
-" END  ----- DEOPLETE CONFIGURATION -----
 
 
 " START  ----- NERD-TREE CONFIGURATION -----
